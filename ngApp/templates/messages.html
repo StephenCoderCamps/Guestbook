@@ -1,0 +1,10 @@
+<h1>Guestbook</h1>
+<ul>
+    <li ng-repeat="guest in vm.guestbook">
+        <ul>
+          <li>{{guest.author}}</li>
+          <li>{{guest.dateCreated}}</li>
+          <li>{{guest.message}}</li>
+        </ul>  
+    </li>
+</ul>

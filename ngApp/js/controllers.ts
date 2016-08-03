@@ -4,7 +4,7 @@ namespace app.Controllers {
       public guestbook;
       public save() {
         this.messageService.save(this.guestbook).then(() =>{
-          this.$state.go(`Home`)
+          this.$state.go(`Messages`)
         })
       }
 
@@ -15,14 +15,16 @@ namespace app.Controllers {
 
   export class MessageServiceController {
       public guestbook;
-      public save() {
-        this.messageService.save(this.guestbook).then(() =>{
-          this.$state.go(`Home`)
-        })
-      }
+      // public save() {
+      //   this.messageService.save(this.guestbook).then(() =>{
+      //     this.$state.go(`Home`)
+      //   })
+      // }
 
-        constructor(private messageService:app.Services.MessageService, private $state:ng.ui.IStateService) {
 
+
+        constructor(private messageService:app.Services.MessageService, private $state:ng.ui.IStateService,) {
+          this.guestbook = this.messageService.list();
     }
   }
 
