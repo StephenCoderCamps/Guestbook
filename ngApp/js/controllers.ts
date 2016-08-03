@@ -2,15 +2,18 @@ namespace app.Controllers {
 
   export class HomeController {
       public guestbook;
-      public save() {
+      public save()
+       {
         this.messageService.save(this.guestbook).then(() =>{
-          this.$state.go(`Messages`)
+
         })
+
       }
 
-        constructor(private messageService:app.Services.MessageService, private $state:ng.ui.IStateService) {
-
-    }
+        constructor(private messageService:app.Services.MessageService, private $state:ng.ui.IStateService)
+         {
+            this.guestbook = this.messageService.list();
+         }
   }
 
   export class MessageServiceController {

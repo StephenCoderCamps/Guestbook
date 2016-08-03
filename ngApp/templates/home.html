@@ -1,5 +1,15 @@
 <h1>Home Page</h1>
 
+<ul>
+    <li ng-repeat="guest in vm.guestbook">
+        <ul>
+          <li>{{guest.author}}</li>
+          <li>{{guest.dateCreated}}</li>
+          <li>{{guest.message}}</li>
+        </ul>
+    </li>
+</ul>
+
 <form ng-submit="vm.save()">
   <div>
     <label>Author:</label>
