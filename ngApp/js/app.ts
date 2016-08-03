@@ -11,11 +11,11 @@ namespace app {
       templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
-    }).state('Messages', {
-      url: '/messages',
-      templateUrl: '/templates/messages.html',
-      controller: app.Controllers.MessageServiceController,
-      controllerAs: 'vm'
+    // }).state('Messages', {
+    //   url: '/messages',
+    //   templateUrl: '/templates/messages.html',
+    //   controller: app.Controllers.MessageServiceController,
+    //   controllerAs: 'vm'
     });
 
     $urlRouterProvider.otherwise('/');
