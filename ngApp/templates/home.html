@@ -1,3 +1,18 @@
 <h1>Home Page</h1>
 
-<form ng-submit="">
+<form ng-submit="vm.save()">
+  <div>
+    <label>Author:</label>
+    <input ng-model="vm.guestbook.author">
+  </div>
+  <div>
+    <label>Date Created:</label>
+    <input ng-model="vm.guestbook.dateCreated">
+  </div>
+  <div>
+    <label>Message:</label>
+    <input ng-model="vm.guestbook.message">
+  </div>
+
+  <button>Submit</button>
+</form>

@@ -3,6 +3,10 @@ namespace app.Services {
       export class MessageService {
         private MessageResource;
 
+        public list() {
+          return this.MessageResource.query();
+        }
+
         public save(guestbook) {
           return this.MessageResource.save(guestbook).$promise;
         }
